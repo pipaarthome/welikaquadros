@@ -1,8 +1,99 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <title>Welika Quadros</title>
     </head>
     <body>
-        
+        <header class="site-header">
+            <div class="header-overlay"></div>
+            <div class="header-content">
+                <p class="eyebrow">Welika Welkovic</p>
+                <h1>Grande Sertão Veredas</h1>
+                <p class="subtitle"></p>
+            </div>
+        </header>
+
+        <main>
+            <div class="country-selector" role="radiogroup" aria-label="Select a country">
+                <div class="flag-column">
+                    <input type="radio" id="country-at" name="country" value="at" checked aria-label="Austria">
+                    <label for="country-at" aria-label="Austria">🇦🇹</label>
+
+                    <input type="radio" id="country-br" name="country" value="br" aria-label="Brazil">
+                    <label for="country-br" aria-label="Brazil">🇧🇷</label>
+
+                    <input type="radio" id="country-uk" name="country" value="uk" aria-label="United Kingdom">
+                    <label for="country-uk" aria-label="United Kingdom">🇬🇧</label>
+                </div>
+
+                <div class="country-panels">
+                    <div id="br" class="country-panel">
+                        <div class="country-panel-copy">
+                            <p>Uma tradução cultural que celebra memória, música e identidade no território brasileiro.</p>
+                        </div>
+                        <div class="country-panel-portrait">
+                            <img src="res/welika.png" alt="Welika portrait">
+                        </div>
+                    </div>
+                    <div id="uk" class="country-panel">
+                        <div class="country-panel-copy">
+                            <p>A cultural translation shaped by storytelling, rhythm, and shared traditions across borders.</p>
+                        </div>
+                        <div class="country-panel-portrait">
+                            <img src="res/welika.png" alt="Welika portrait">
+                        </div>
+                    </div>
+                    <div id="at" class="country-panel">
+                        <div class="country-panel-copy">
+                            <p>Eine kulturelle Übersetzung, die Erinnerung, Musik und Identität in einem gemeinsamen Raum verbindet.</p>
+                        </div>
+                        <div class="country-panel-portrait">
+                            <img src="res/welika.png" alt="Welika portrait">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="social-card" href="https://instagram.com/welikaquadros" target="_blank" rel="noreferrer" aria-label="Visit Welika Quadros on Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    <circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/>
+                </svg>
+                <span>@welikaquadros →</span>
+            </a>
+
+            <div class="image-grid">
+                <a class="gallery-card" href="carnavaldeolinda.html">
+                    <img src="res/carnavaldeolinda.jpeg" alt="Carnaval de Olinda">
+                    <span class="card-label">Carnaval de Olinda</span>
+                </a>
+                <a class="gallery-card" href="cirandanapraia.html">
+                    <img src="res/cirandanapraia.jpeg" alt="Ciranda na Praia">
+                    <span class="card-label">Ciranda na Praia</span>
+                </a>
+                <a class="gallery-card" href="obeijosertanejo.html">
+                    <img src="res/obeijosertanejo.jpeg" alt="O Beijo Sertanejo">
+                    <span class="card-label">O Beijo Sertanejo</span>
+                </a>
+                <a class="gallery-card" href="osertanejo.html">
+                    <img src="res/osertanejo.jpeg" alt="O Sertanejo">
+                    <span class="card-label">O Sertanejo</span>
+                </a>
+                <a class="gallery-card" href="saofranciscosertanejo.html">
+                    <img src="res/saofranciscosertanejo.jpeg" alt="São Francisco Sertanejo">
+                    <span class="card-label">São Francisco Sertanejo</span>
+                </a>
+                <a class="gallery-card" href="veredas.html">
+                    <img src="res/veredas.jpeg" alt="Veredas">
+                    <span class="card-label">Veredas</span>
+                </a>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2026 Welika Quadros. All rights reserved.</p>
+        </footer>
     </body>
 </html>

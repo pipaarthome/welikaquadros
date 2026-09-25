@@ -131,10 +131,30 @@ main {
     display: none;
 }
 
+.country-panel-copy {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.country-panel-portrait {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    flex: 0 0 auto;
+    margin-left: 1rem;
+}
+
+.country-panel-portrait img {
+    display: block;
+    width: 5cm;
+    object-fit: contain;
+}
+
 .country-selector:has(#country-br:checked) .country-panel#br,
 .country-selector:has(#country-uk:checked) .country-panel#uk,
 .country-selector:has(#country-at:checked) .country-panel#at {
-    display: block;
+    display: flex;
 }
 
 .artist-card {
@@ -155,6 +175,7 @@ main {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     overflow: hidden;
     isolation: isolate;
+    border-radius: 16px;
 }
 
 .artist-card::before {
@@ -187,6 +208,38 @@ main {
     text-transform: uppercase;
     color: #1f1f1f;
     text-shadow: none;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 2rem;
+    padding: 0.7rem 1.15rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+    color: #1f1f1f;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+}
+
+.social-card svg {
+    width: 2.8rem;
+    height: 2.8rem;
+    color: #1f1f1f;
+    display: block;
 }
 
 .image-grid {
@@ -299,7 +352,7 @@ main {
     pointer-events: none;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2), 0 12px 25px rgba(0, 0, 0, 0.18);
     transform: translateY(-1px);
-    border: none;
+    border: 8px solid transparent;
     box-sizing: border-box;
 }
 
