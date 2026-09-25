@@ -6,12 +6,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Cordel Encarnado';
-    src: url('res/cordelencarnado-regular.ttf') format('truetype');
-    font-display: swap;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -87,7 +81,7 @@ main {
 
 .header-content h1 {
     margin: 0;
-    font-family: 'Cordelina', 'Cordel Encarnado', Georgia, serif;
+    font-family: 'Cordelina', Georgia, serif;
     font-size: clamp(2.2rem, 4vw, 4rem);
     line-height: 1.1;
 }
@@ -151,29 +145,43 @@ main {
     color: #1c1c1c;
 }
 
-.country-panel p:not(.bio-title) {
+.country-panel p:not(.bio-title):not(.art-title) {
     margin: 0;
     text-align: justify;
 }
 
 .country-panel p + p,
 .country-panel .bio-title + p,
-.country-panel p + .bio-title {
+.country-panel p + .bio-title,
+.country-panel .art-title + p,
+.country-panel p + .art-title {
     margin-top: 0.6rem;
 }
 
 .bio-title,
-.header-content h1,
+.art-title,
 .featured-profile-copy h2 {
     text-align: left;
 }
 
 .bio-title {
     margin: 0.5rem 0 0;
-    /* font-family: 'Cordelina', 'Cordel Encarnado', Georgia, serif; */
     font-size: 1.15rem;
     line-height: 1.3;
     text-align: left;
+}
+
+.art-title {
+    margin: 0;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.header-content h1 {
+    text-align: center;
 }
 
 .art-meta {
@@ -375,7 +383,7 @@ main {
 
 .featured-profile-copy h2 {
     margin: 0 0 0.5rem;
-    font-family: 'Cordelina', 'Cordel Encarnado', Georgia, serif;
+    font-family: 'Cordelina', Georgia, serif;
     font-size: clamp(1.6rem, 2vw, 2.5rem);
 }
 
