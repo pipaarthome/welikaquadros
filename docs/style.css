@@ -218,8 +218,8 @@ main {
 }
 
 .country-selector:has(#country-br:checked) .country-panel#br,
-.country-selector:has(#country-uk:checked) .country-panel#uk,
-.country-selector:has(#country-at:checked) .country-panel#at {
+.country-selector:has(#country-en:checked) .country-panel#en,
+.country-selector:has(#country-de:checked) .country-panel#de {
     display: block;
 }
 
