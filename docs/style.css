@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Rye&display=swap');
+
+@font-face {
+    font-family: 'Cordelina';
+    src: url('res/cordelina-font.otf') format('opentype');
+    font-display: swap;
+}
+
 * {
     box-sizing: border-box;
 }
 
 html {
-    font-family: sans-serif;
+    font-family: 'Alegreya', Georgia, serif;
     line-height: 1.5;
 }
 
@@ -71,6 +79,7 @@ main {
 
 .header-content h1 {
     margin: 0;
+    font-family: 'Cordelina', 'Rye', Georgia, serif;
     font-size: clamp(2.2rem, 4vw, 4rem);
     line-height: 1.1;
 }
@@ -322,6 +331,7 @@ main {
 
 .featured-profile-copy h2 {
     margin: 0 0 0.5rem;
+    font-family: 'Cordelina', 'Rye', Georgia, serif;
     font-size: clamp(1.6rem, 2vw, 2.5rem);
 }
 
@@ -368,6 +378,7 @@ main {
     padding: 0.7rem 0.8rem;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     color: #fff;
+    font-family: 'Alegreya', Georgia, serif;
     font-weight: 600;
     font-size: 0.95rem;
     border-bottom-left-radius: 10px;
