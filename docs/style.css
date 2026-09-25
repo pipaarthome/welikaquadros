@@ -129,6 +129,32 @@ main {
 
 .country-panel {
     display: none;
+    flex-direction: column;
+    gap: 0.85rem;
+    line-height: 1.6;
+    color: #1c1c1c;
+}
+
+.country-panel p {
+    margin: 0;
+    text-align: justify;
+}
+
+.art-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4a4a4a;
+}
+
+.art-meta span + span::before {
+    content: "|";
+    margin-right: 0.5rem;
+    color: rgba(34, 34, 34, 0.45);
 }
 
 .country-panel-copy {
