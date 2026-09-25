@@ -1,0 +1,312 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #222;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header, footer {
+    width: 100%;
+}
+
+main {
+    padding: 2rem;
+    max-width: 20cm;
+}
+
+.feature-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 0 2rem;
+    border-radius: 12px;
+}
+
+.site-header {
+    position: relative;
+    min-height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 2rem;
+    background-image: url('res/obeijosertanejo.jpeg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.header-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    max-width: 700px;
+}
+
+.eyebrow {
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    line-height: 1.1;
+}
+
+.subtitle {
+    margin: 0.75rem 0 0;
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.country-selector {
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.flag-column {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    min-height: 100%;
+    gap: 0.75rem;
+    flex: 0 0 auto;
+}
+
+.country-selector input {
+    display: none;
+}
+
+.country-selector label {
+    display: block;
+    cursor: pointer;
+    padding: 0.25rem;
+    font-size: 2rem;
+    line-height: 1;
+    border: 2px solid transparent;
+    border-radius: 0.25rem;
+    width: fit-content;
+}
+
+.country-selector input:checked + label {
+    border-color: #222;
+}
+
+.country-selector input:focus-visible + label {
+    outline: 2px solid #246bfd;
+    outline-offset: 2px;
+}
+
+.country-panels {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.country-panel {
+    display: none;
+}
+
+.country-selector:has(#country-br:checked) .country-panel#br,
+.country-selector:has(#country-uk:checked) .country-panel#uk,
+.country-selector:has(#country-at:checked) .country-panel#at {
+    display: block;
+}
+
+.artist-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 1rem;
+    padding: 0.5rem 2.5rem;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.45);
+    text-decoration: none;
+    color: #1f1f1f;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.artist-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.52);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: -1;
+}
+
+.artist-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+}
+
+.artist-card img {
+    width: 1.5cm;
+    height: 1.5cm;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.artist-card span {
+    font-size: 0.98rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #1f1f1f;
+    text-shadow: none;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 1rem;
+    width: 100%;
+}
+
+.featured-profile-card {
+    display: grid;
+    grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+    margin-top: 1rem;
+    background: #f7f3ee;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    grid-column: 1 / -1;
+}
+
+.featured-profile-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+}
+
+.featured-profile-image {
+    min-height: 260px;
+    background: #ece7df;
+}
+
+.featured-profile-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-profile-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem 1.5rem 1.5rem 0;
+}
+
+.story-eyebrow {
+    color: #7a5a3d;
+    margin-bottom: 0.4rem;
+}
+
+.featured-profile-copy h2 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.6rem, 2vw, 2.5rem);
+}
+
+.featured-profile-copy p {
+    margin: 0 0 0.75rem;
+    color: #383838;
+}
+
+.featured-link {
+    font-weight: 700;
+    color: #7a5a3d;
+}
+
+.gallery-card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f0f0f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.02);
+}
+
+.gallery-card .card-label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.7rem 0.8rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.gallery-card.active {
+    pointer-events: none;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2), 0 12px 25px rgba(0, 0, 0, 0.18);
+    transform: translateY(-1px);
+    border: none;
+    box-sizing: border-box;
+}
+
+.site-footer {
+    padding: 1.25rem 2rem 2rem;
+    text-align: center;
+    color: #555;
+    font-size: 0.95rem;
+    border-top: 1px solid #eee;
+}
